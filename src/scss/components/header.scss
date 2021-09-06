@@ -1,0 +1,122 @@
+@use '../utils' as *;
+
+.header {
+	width: 100%;
+	display: flex;
+	z-index: 1100;
+	box-sizing: border-box;
+	flex-shrink: 0;
+	flex-direction: column;
+	color: var(--dark-gray);
+	background-color: var(--white);
+	position: static;
+
+	&__bar {
+		display: flex;
+		justify-content: space-between;
+		min-height: rem(56);
+		padding-left: rem(16);
+		padding-right: rem(16);
+		position: relative;
+		align-items: center;
+
+		@include breakpoint(small) {
+			min-height: rem(64);
+			padding-left: rem(24);
+			padding-right: rem(24);
+		}
+	}
+
+	&__title1 {
+		font-size: rem(24);
+		font-family: var(--font-primary);
+		font-weight: 400;
+		line-height: 1.334;
+		letter-spacing: rem(0);
+		margin: 0;
+
+		@include breakpoint(small) {
+			display: block;
+		}
+	}
+
+	&__title2 {
+		font-size: rem(20);
+		font-family: var(--font-secondary);
+		font-weight: 500;
+		line-height: 1.6;
+		letter-spacing: 0.0075em;
+		margin: 0;
+
+		@include breakpoint(small) {
+			display: block;
+		}
+	}
+
+	&__right {
+		display: flex;
+	}
+
+	&__search {
+		width: 100%;
+		margin-left: 0;
+		position: relative;
+		margin-right: rem(16);
+		border-radius: rem(4);
+		background-color: rgba(255, 255, 255, 0.15);
+
+		@include breakpoint(small) {
+			width: auto;
+			margin-left: rem(24);
+		}
+
+		&__icon {
+			height: 100%;
+			display: flex;
+			padding: 0px rem(16);
+			position: absolute;
+			align-items: center;
+			pointer-events: none;
+			justify-content: center;
+		}
+
+		&__inputContainer {
+			cursor: text;
+			display: inline-flex;
+			position: relative;
+			font-size: 1rem;
+			box-sizing: border-box;
+			align-items: center;
+			font-family: var(--font-secondary);
+			font-weight: 400;
+			line-height: 1.1876em;
+			letter-spacing: 0.00938em;
+
+			&__input {
+				padding: rem(8) rem(8) rem(8) 0px;
+				transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+				padding-left: calc(1em + 32px);
+				font: inherit;
+				color: currentColor;
+				border: 0;
+				height: 1.1876em;
+				margin: 0;
+				display: block;
+				min-width: 0;
+				background: none;
+				box-sizing: content-box;
+				letter-spacing: inherit;
+				animation-duration: 10ms;
+				-webkit-tap-highlight-color: transparent;
+
+				@include breakpoint(medium) {
+					width: 20ch;
+				}
+			}
+
+			&__input:focus {
+				outline: none;
+			}
+		}
+	}
+}

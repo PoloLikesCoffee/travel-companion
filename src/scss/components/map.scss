@@ -1,0 +1,44 @@
+@use '../utils' as *;
+
+.map {
+	width: 100%;
+	height: 85vh;
+
+	&__marker {
+		position: absolute;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+	}
+	&__marker:hover {
+		z-index: 2;
+	}
+
+	&__card {
+		width: rem(110);
+		display: flex;
+		padding: rem(10);
+		flex-direction: column;
+		justify-content: center;
+		border-radius: rem(4);
+		box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+			0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+		color: rgba(0, 0, 0, 0.87);
+		transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+		background-color: #fff;
+
+		&__title {
+			margin: 0;
+			margin-bottom: 0.35em;
+			font-size: rem(14);
+			font-family: var(--font-secondary);
+			font-weight: 500;
+			line-height: 1.57;
+			letter-spacing: 0.00714em;
+		}
+
+		&__img {
+			cursor: pointer;
+			margin-bottom: 0.35em;
+		}
+	}
+}

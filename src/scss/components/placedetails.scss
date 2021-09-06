@@ -1,0 +1,52 @@
+@use '../utils' as *;
+
+.details__card {
+	overflow: hidden;
+	box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%),
+		0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%);
+	border-radius: rem(4);
+	color: rgba(0, 0, 0, 0.87);
+	transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+	background-color: var(--white);
+
+	&__content {
+		padding: rem(16);
+
+		&__title {
+			font-size: rem(24);
+			font-family: var(--font-secondary);
+			font-weight: 400;
+			line-height: 1.334;
+			letter-spacing: 0em;
+			margin: 0;
+			margin-bottom: 0.35em;
+		}
+	}
+
+	&__content:last-child {
+		padding: rem(24);
+	}
+
+	.chip {
+		margin: rem(5) rem(5) rem(5) 0;
+	}
+
+	.address {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: rem(10);
+	}
+
+	.phone {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.btn__container {
+		display: flex;
+		padding: rem(8);
+		align-items: center;
+	}
+}
